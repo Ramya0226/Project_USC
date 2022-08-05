@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+
+
+    <head>
+        <link rel="stylesheet" href="../styles_sheet.css">
+        <script src="../javascript.js"></script>
+    </head>
+    <body>
+        <div class="div-1">
+        <h1>
+            Blood Pressure Predictor
+        </h1>
+        <h2>
+            Fill out the form to get you Blood Pressure estimate!
+        </h2>
+        </div>
+        <div class="div-2">
+            <div class="innerDiv tooltip">
+                <label class="inputLabelage ">
+                    <span class="span_style-1">Age</span>
+                    <span class="span_style-2"> *</span> 
+                </label>
+                    <input type="text" id="agebox" placeholder="Enter age in years" pattern="[0-9]+" required >
+                    <span class="tooltiptext" id ="ageTooltip">Please enter a number.</span>
+            </div>
+        
+            <div class="innerDiv tooltip">
+                <label class="inputLabel">
+                    <span class="span_style-1">Weight</span>
+                    <span class="span_style-2"> *</span>
+                </label>
+                    <input type="text" id="weightbox" placeholder="Enter weight in kg" required>
+                    <span class="tooltiptext" id="weightTooltip">Please enter a number.</span>
+                <br>
+            </div>
+        </div>
+        <div class="div-4">
+        <input type="submit" value="Calculate" onclick="myfunction()">
+        </div>
+        <div class="display_response" id="predict"></div>
+    </body>
+</html>

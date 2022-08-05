@@ -1,0 +1,43 @@
+--PostgreSQL
+
+-- Database: HomeWork3
+
+-- DROP DATABASE "HomeWork3";
+
+-- CREATE DATABASE "HomeWork3"
+--     WITH 
+--     OWNER = postgres
+--     ENCODING = 'UTF8'
+--     LC_COLLATE = 'English_United States.1252'
+--     LC_CTYPE = 'English_United States.1252'
+--     TABLESPACE = pg_default
+--     CONNECTION LIMIT = -1;
+
+create table coordinates (name varchar, geom geometry);
+
+insert into coordinates values ('LeaveyLibrary','POINT(-118.2828771 34.0215748)');
+insert into coordinates values ('TutorHall','POINT(-118.2898055 34.0202159)');
+insert into coordinates values ('TommyTrojan','POINT(-118.2855761 34.0204119)');
+insert into coordinates values ('Viterbi','POINT(-118.28888127 34.0205713)');
+insert into coordinates values ('BrookPavilion','POINT(-118.2896859 34.0234246)');
+insert into coordinates values ('LyonCenter','POINT(-118.288460 34.0246447)');
+insert into coordinates values ('ArtSchool','POINT(-118.2865106 34.0235637)');
+insert into coordinates values ('USCVillage','POINT(-118.284185 34.026141)');
+insert into coordinates values ('ScienceCenter','POINT(-118.2857264 34.0160827)');
+insert into coordinates values ('USCHotel','POINT(-118.2814346 34.019144)');
+insert into coordinates values ('TaperHall','POINT(-118.2844957 34.0223973)');
+insert into coordinates values ('DohneyLibrary','POINT(-118.2841352 34.0204841)');
+insert into coordinates values ('Apartment','POINT(-118.282604013 34.03163032)');
+
+select * from coordinates;
+
+/*Convex Hull query to get the cordinates*/
+SELECT ST_ConvexHull(ST_Collect(geom)) FROM coordinates;
+SELECT ST_AsText(ST_ConvexHull(ST_Collect(geom))) FROM coordinates;
+
+/*Query to get 4 nearest neighbouring locations from my apartment */
+SELECT name, ST_Astext(geom) as location, ST_Distance(geom,'POINT(-118.282604013 34.03163032)') as distance 
+FROM coordinates
+WHERE name<>'Apartment' 
+ORDER BY ST_Distance(geom,'POINT(-118.282604013 34.03163032)') 
+limit 4;

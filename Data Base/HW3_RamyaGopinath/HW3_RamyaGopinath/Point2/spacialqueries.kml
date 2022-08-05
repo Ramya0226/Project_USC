@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+
+<Style id="z1">
+<IconStyle><Icon><href>http://www.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href></Icon></IconStyle>
+</Style>
+
+<Placemark><name>Leavey Library</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2828771,34.0215748</coordinates></Point>
+</Placemark>
+
+<Placemark><name>Tommy Trojan</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2854492,34.0205715</coordinates></Point>
+</Placemark>
+
+<Placemark><name>Tutor Hall</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2898055,34.0202159</coordinates></Point>
+</Placemark>
+
+<Placemark><name>Viterbi</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.28888127,34.0205713</coordinates></Point>
+</Placemark>
+
+<Placemark><name>BrooksPavilion</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2896859,34.0234246</coordinates></Point>
+</Placemark>
+
+<Placemark><name>Lyon Center</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.28846058,34.0246447</coordinates></Point>
+</Placemark>
+
+<Placemark><name>Art School</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2865106,34.0235637</coordinates></Point>
+</Placemark>
+
+<Placemark><name>USC Village</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2841856,34.0261419</coordinates></Point>
+</Placemark>
+
+<Placemark><name>ScienceCenter</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2857264,34.0160827</coordinates></Point>
+</Placemark>
+
+<Placemark><name>USC Hotel</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2814346,34.019144</coordinates></Point>
+</Placemark>
+
+<Placemark><name>Apartment</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.282604013,34.03163032</coordinates></Point>
+</Placemark>
+
+<Placemark><name>Taper hall</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.284495,34.022397</coordinates></Point>
+</Placemark>
+
+<Placemark><name>DohneyLibrary</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2841352,34.0204841</coordinates></Point>
+</Placemark>
+
+
+
+<Style id="z1">
+	<IconStyle><Icon><href>http://www.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href></Icon></IconStyle>
+</Style>
+
+<Style id="yellowLine">
+      <LineStyle>
+        <color>ff97dff0</color>
+        <width>4</width>
+      </LineStyle>
+</Style>
+
+<Placemark> 
+ <name>L1</name>
+	<styleUrl>#yellowLine</styleUrl>
+	<LineString>
+		<coordinates>
+			-118.282604013,34.03163032,0 
+			-118.284185,34.026141,0
+			</coordinates>
+	</LineString>
+</Placemark>
+
+<Placemark> 
+ <name>L2</name>
+	<styleUrl>#yellowLine</styleUrl>
+	<LineString>
+		<coordinates>
+			-118.282604013,34.03163032,0 
+			-118.2865106,34.0235637,0
+		</coordinates>
+	</LineString>
+</Placemark>
+
+<Placemark> 
+ <name>L3</name>
+	<styleUrl>#yellowLine</styleUrl>
+	<LineString>
+		<coordinates>
+			-118.282604013,34.03163032,0 
+			-118.28846058,34.0246447,0
+		</coordinates>
+	</LineString>
+</Placemark>
+
+<Placemark> 
+ <name>L4</name>
+	<styleUrl>#yellowLine</styleUrl>
+	<LineString>
+		<coordinates>
+			-118.282604013,34.03163032,0 
+			-118.284495,34.022397,0
+		</coordinates>
+	</LineString>
+</Placemark>
+
+
+
+<Style id="z1">
+	<IconStyle><Icon><href>http://www.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href></Icon></IconStyle>
+</Style>
+
+<Style id="redLineGreenPoly">
+      <LineStyle>
+        <color>ff0000ff</color>
+        <width>6</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>7f00ff00</color>
+      </PolyStyle>
+    </Style>
+
+<Placemark>
+    <name>Convex Hull</name>
+	<styleUrl>#redLineGreenPoly</styleUrl>
+        <Polygon>
+		<extrude>1</extrude>
+		<altitudeMode>clampToGround</altitudeMode>
+		<outerBoundaryIs>
+			<LinearRing>
+				<coordinates>
+					-118.2857264,34.0160827,0
+					-118.2898055,34.0202159,0
+					-118.2896859,34.0234246,0
+					-118.282604013,34.03163032,0
+					-118.2814346,34.019144,0
+					-118.2857264,34.0160827,0
+				</coordinates>
+			</LinearRing>
+      </outerBoundaryIs>
+       </Polygon>
+ </Placemark>
+ 
+
+ </Document>
+</kml>

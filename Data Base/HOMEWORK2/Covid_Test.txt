@@ -1,0 +1,65 @@
+create table Covid_Test (
+    Test_ID number not null,
+    Emp_ID number not null,
+    Test_Date	date not null,
+    Typeoftest varchar2(10) not null,
+    Locationoftest varchar2(10) not null,
+    Test_Result varchar2(10) not null,
+    PRIMARY KEY(Test_ID),
+    FOREIGN KEY(Emp_ID) References Employee
+);
+
+INSERT INTO Covid_Test VALUES (456,10,501,DATE '2021-10-08','RTPCR','Onsite','Positive');
+INSERT INTO Covid_Test VALUES (457,27,501,DATE '2021-10-09','RTPCR','Offsite','Positive');
+INSERT INTO Covid_Test VALUES (458,11,522,DATE '2021-10-08','RTPCR','Onsite','Positive');
+INSERT INTO Covid_Test VALUES (459,12,512,DATE '2021-10-14','RTPCR','Offsite','Negative');
+INSERT INTO Covid_Test VALUES (460,13,506,DATE '2021-10-09','RTPCR','Onsite','Positive');
+INSERT INTO Covid_Test VALUES (461,14,520,DATE '2021-10-10','RTPCR','Onsite','Positive');
+INSERT INTO Covid_Test VALUES (462,15,521,DATE '2021-10-11','RTPCR','Onsite','Negative');
+INSERT INTO Covid_Test VALUES (463,16,517,DATE '2021-10-09','RTPCR','Offsite','Positive');
+INSERT INTO Covid_Test VALUES (464,17,518,DATE '2021-10-10','RTPCR','Offsite','Positive');
+INSERT INTO Covid_Test VALUES (465,18,519,DATE '2021-10-16','RTPCR','Offsite','Positive');
+INSERT INTO Covid_Test VALUES (466,19,503,DATE '2021-10-12','RTPCR','Onsite','Negative');
+INSERT INTO Covid_Test VALUES (467,20,505,DATE '2021-10-11','RTPCR','Onsite','Positive');
+INSERT INTO Covid_Test VALUES (468,21,510,DATE '2021-10-08','RTPCR','Onsite','Positive');
+INSERT INTO Covid_Test VALUES (469,22,501,DATE '2021-10-14','RTPCR','Offsite','Negative');
+INSERT INTO Covid_Test VALUES (470,23,509,DATE '2021-10-14','RTPCR','Onsite','Negative');
+INSERT INTO Covid_Test VALUES (471,24,506,DATE '2021-10-15','RTPCR','Offsite','Negative');
+INSERT INTO Covid_Test VALUES (472,25,521,DATE '2021-10-17','RTPCR','Onsite','Negative');
+INSERT INTO Covid_Test VALUES (473,26,515,DATE '2021-10-13','RTPCR','Offsite','Positive');
+
+
+Sick Hospitalized well
+27 501
+11 522 DATE '2021-10-08'
+13 506 DATE '2021-10-09'
+14 520 DATE '2021-10-10'
+16 517 DATE '2021-10-09'
+17 518 DATE '2021-10-10'
+18 519 DATE '2021-10-16'
+20 505 DATE '2021-10-11'
+21 510 DATE '2021-10-08'
+26 515 DATE '2021-10-13'
+
+
+
+
+create table CaseDetails ( 
+    Test_ID number not null, 
+    Emp_ID number not null, 
+    Symptomatic varchar2(20) not null, 
+    PRIMARY KEY(Test_ID,Emp_ID), 
+    FOREIGN KEY(Emp_ID) References Employee, 
+    FOREIGN KEY(Test_ID) References Covid_Test 
+);
+
+INSERT INTO CaseDetails VALUES (456,501,'Asymptomatic');
+INSERT INTO CaseDetails VALUES (458,522,'Symptomatic');
+INSERT INTO CaseDetails VALUES (460,506,'Asymptomatic');
+INSERT INTO CaseDetails VALUES (461,520,'Asymptomatic');
+INSERT INTO CaseDetails VALUES (463,517,'Symptomatic');
+INSERT INTO CaseDetails VALUES (464,518,'Symptomatic');
+INSERT INTO CaseDetails VALUES (465,519,'Asymptomatic');
+INSERT INTO CaseDetails VALUES (467,505,'Asymptomatic');
+INSERT INTO CaseDetails VALUES (468,510,'Symptomatic');
+INSERT INTO CaseDetails VALUES (473,515,'Asymptomatic');

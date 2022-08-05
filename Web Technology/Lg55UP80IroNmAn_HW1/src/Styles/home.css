@@ -1,0 +1,241 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Comfortaa', cursive;
+}
+
+.stick{
+  width: 1487px;
+  border-top: 2px solid #f47920;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+}
+
+/* Navbar Css  */
+.navbar {
+  width: 1487px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  padding: 20px 10px;
+  background-color: #12141c;
+}
+
+.navbar li, .navbar a {
+  font-weight: bolder;
+  font-size: 25px;
+  text-decoration: none;
+  color: azure;
+  background-color: #12141c;
+  text-shadow: 1px 1px #f47920;
+}
+
+.navbar li{
+  margin: 0 70px;
+}
+
+.navbar li, .navbar a:hover {
+  color: #f47920;
+  text-shadow: 1px 1px azure;
+}
+
+/* Banner Css  */
+.header {
+  width: 1487px;
+  background-image: url("https://ramyagopinath08.github.io/Lg55UP80IroNmAn/images/rodeo-drive.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 87%;
+  position: relative;
+  object-fit: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 365px;
+  font-size: 40px;
+  color: #f47920;
+  text-shadow: 1px 1px #fff;
+  font-weight: 600;
+}
+
+/* Section 2 Css  */
+
+#section2 {
+  width: 1487px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 700px;
+  background-color: #212529;
+  padding: 0;
+}
+
+.cardContainer {
+  width: 320px;
+  height: 475px;
+  background-color: #12141c;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin: 0 20px;
+  border-radius: 5px;
+}
+
+.cardContainer h1 {
+  color: azure;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.cardContainer p {
+  color: azure;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 10px 0;
+  line-height: 22px;
+}
+.cardImageContainer {
+  width: auto;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.cardImageContainer img {
+  width: 300px;
+  height: 200px;
+  border-radius: 5px;
+}
+
+/* Section 3 css */
+
+#section3 {
+  height: 620px;
+  width: 1487px;
+  background-color: #12141c;
+  padding: 200px;
+  margin: 0;
+}
+
+.innerDiv {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.textDiv {
+  float: left;
+  color: azure;
+  font-weight: 600;
+  margin: 0 20px;
+  text-align: justify;
+  height: 550px;
+  font-size: 17px;
+  line-height: 20px;
+}
+
+.textDiv p {
+  margin-bottom: 20px;
+}
+
+.innerDiv img {
+  width: 500px;
+  height: 290px;
+  margin: 0 5px;
+}
+
+/* Section 4 */
+
+#section4 {
+  height: 760px;
+  width: 1487px;
+  background-color: #212529;
+  padding: 150px 220px;
+}
+
+.infoContainer {
+  background-color: #212529;
+  height: 250px;
+  width: 1060px;
+}
+
+.infoText {
+  color: azure;
+  text-align: justify;
+  margin: 0 20px;
+}
+
+.infoText h1 {
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.infoText p {
+  font-size: 16px;
+  font-weight: 400;
+}
+.infoImage img {
+  width: 320px;
+  height: 190px;
+  float: left;
+  clear: both;
+  margin: 0 20px;
+}
+
+.infoContainer:nth-child(2) .infoImage {
+  float: right;
+}
+
+.infoContainer:nth-child(2) .infoText h1 {
+  text-align: right;
+}
+
+
+
+/* Footer css  */
+
+
+.footer{
+  height: 240px;
+  width: 1487px;
+  background-color: rgb(19, 18, 18);
+}
+
+.foot1{
+  float: left;
+  width: 800px;
+  color: aliceblue;
+  text-align: center;
+  padding-top: 80px;
+  padding-left: 200px;
+}
+
+.foot2{
+  float: right;
+  color: aliceblue;
+  padding-top: 20px;
+  padding-right: 420px;
+  text-align: center;
+}
+
+.foot2 p{
+  line-height: 45px;
+  padding-bottom: 10px;
+}
+
+.foot2 div{
+  line-height: 30px;
+}
+
+.foot2 div a{
+  color: aliceblue;
+  text-decoration: none;
+}

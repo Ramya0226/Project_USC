@@ -1,0 +1,4 @@
+Notification - Emp_ID,Floor_ID, email_ID, Phone_No, Test_Result
+CaseDetails - Test_ID, Emp_ID, Symtomatic
+HealthStatus - Test_ID, Emp_ID, Date , HealthStatus
+

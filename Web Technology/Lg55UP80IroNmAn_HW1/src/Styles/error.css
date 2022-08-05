@@ -1,0 +1,137 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Comfortaa', cursive;
+  }
+
+.stick{
+  width: 1487px;
+  border-top: 2px solid #f47920;
+  position: fixed;
+  z-index: 100;
+   top: 0;
+}
+
+/* Navbar Css  */
+.navbar {
+    display: flex;
+    width: 1487px;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    padding: 20px 10px;
+    background-color: #12141c;
+  }
+  
+  .navbar li, .navbar a{
+    font-weight: bolder;
+    font-size: 25px;
+    text-decoration: none;
+    color: azure;
+    background-color: #12141c;
+    text-shadow: 2px 2px #f47920;
+  }
+  
+  .navbar li, .navbar a:hover {
+    color: #f47920;
+    text-shadow: 2px 2px azure;
+  }
+  
+  .navbar li{
+    margin: 0 70px;
+  }
+
+
+
+
+.error{
+    background: #F2825B url("https://ramyagopinath08.github.io/Lg55UP80IroNmAn/images/404-featured.jpg");
+    color: black;
+    width: 1487px;
+    height: 360px;
+    position: relative;
+    background-position: 1480px 600px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+}
+
+.backcolo{
+    position: absolute;
+    width: 1487px;
+    height: 360px;
+    background: #F2825B;
+    opacity: 0.5;
+}
+
+.pagenotfound{
+    font-size: 40px;
+    z-index: 1;
+    font-weight: 900;
+}
+
+.exploresec2{
+    height: 300xpx;
+    width: 1487px;
+    background-color: rgb(32, 32, 32);
+}
+
+.page{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 165px;
+}
+
+.page p{
+    color: aliceblue;
+    line-height: 25px;
+    line-height: normal;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+
+/* Footer css  */
+
+
+.footer{
+    height: 240px;
+    width: 1487px;
+    background-color: rgb(19, 18, 18);
+}
+
+.foot1{
+    float: left;
+    width: 800px;
+    color: aliceblue;
+    text-align: center;
+    padding-top: 80px;
+    padding-left: 200px;
+}
+
+.foot2{
+    float: right;
+    color: aliceblue;
+    padding-top: 20px;
+    padding-right: 420px;
+    text-align: center;
+}
+
+.foot2 p{
+    line-height: 45px;
+    padding-bottom: 10px;
+}
+
+.foot2 div{
+    line-height: 30px;
+}
+
+.foot2 div a{
+    color: aliceblue;
+    text-decoration: none;
+}

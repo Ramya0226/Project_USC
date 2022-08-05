@@ -1,0 +1,16 @@
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*				Data Base Used : LIVE SQL Oracle
+
+			Q3. Write a query to output the 'sickest' floor.
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+select f.Floor_ID,count(f.floor_ID)
+from Floor f
+INNER JOIN HealthStatus h
+ON f.Emp_ID = (Select distinct h.Emp_ID from HealthStatus where h.HealthStatus='Sick')
+GROUP BY f.FLoor_ID
+ORDER BY Count(f.Floor_ID) DESC
+FETCH FIRST 1 ROWS ONLY;

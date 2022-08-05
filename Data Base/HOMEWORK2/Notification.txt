@@ -1,0 +1,24 @@
+Create table Notification(
+ Notification_ID number not null,
+ Emp_ID number not null,
+ Notification_Date date not null,
+ Notification_Type varchar(20) not null,
+ PRIMARY KEY(Notification_ID),
+ FOREIGN KEY(Emp_ID) References Employee
+);
+
+INSERT INTO Notification VALUES(1,501,DATE '2021-10-09','Mandatory');
+INSERT INTO Notification VALUES(2,502,DATE '2021-10-08','Optional');
+INSERT INTO Notification VALUES(3,522,DATE '2021-10-09','Mandatory');
+INSERT INTO Notification VALUES(4,506,DATE '2021-10-10','Mandatory');
+INSERT INTO Notification VALUES(5,520,DATE '2021-10-11','Mandatory');
+INSERT INTO Notification VALUES(6,517,DATE '2021-10-10','Mandatory');
+INSERT INTO Notification VALUES(7,518,DATE '2021-10-11','Mandatory');
+INSERT INTO Notification VALUES(8,519,DATE '2021-10-17','Mandatory');
+INSERT INTO Notification VALUES(9,505,DATE '2021-10-12','Mandatory');
+INSERT INTO Notification VALUES(10,510,DATE '2021-10-09','Mandatory');
+INSERT INTO Notification VALUES(11,515,DATE '2021-10-14','Mandatory');
+INSERT INTO Notification VALUES(12,503,DATE '2021-10-08','Optional');
+INSERT INTO Notification VALUES(13,508,DATE '2021-10-08','Optional');
+INSERT INTO Notification VALUES(14,512,DATE '2021-10-08','Optional');
+INSERT INTO Notification VALUES(15,504,DATE '2021-10-08','Optional');

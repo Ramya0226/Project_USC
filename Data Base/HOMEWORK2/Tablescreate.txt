@@ -1,0 +1,92 @@
+SYS
+SYSTEM
+PDBADMIN
+Ramya@08
+
+sqlsplus / as sysdba;
+select * from v$version;
+select name, open_mode from v$pdbs;
+
+
+
+ create table Employee(
+   Emp_ID int not null,
+   F_name varchar(10) not null,
+   L_name varchar(10) not null,
+   Job_title varchar(20) not null,
+   Phone_no int not null,
+   Email_ID varchar(30) not null,
+   Gender varchar(10) not null,
+   Primary key(Emp_ID)
+   );
+
+
+create table Scanning ( 
+    Scan_ID number not null, 
+    Floor_no varchar2(5) not null, 
+    Emp_ID number not null, 
+    Device_no number not null, 
+    Temp number not null, 
+    Scan_Date date not null, 
+    PRIMARY KEY(Scan_ID), 
+    FOREIGN KEY(Emp_ID) References Employee 
+);
+
+
+
+create table Meetings ( 
+    Booking_ID number not null, 
+    Floor_no varchar2(5) not null, 
+    Emp_ID number not null, 
+    MeetingRoom_no number not null, 
+    NO_OfEmp number not null, 
+    Meeting_Date date not null, 
+    Start_Time timestamp not null, 
+    End_Time timestamp not null, 
+    PRIMARY KEY(Booking_ID,Emp_ID), 
+    FOREIGN KEY(Emp_ID) References Employee 
+)
+
+create table Covid_Test ( 
+    Test_ID number not null, 
+    Emp_ID number not null, 
+    Scan_ID number not null,
+    Test_Date	date not null, 
+    Typeoftest varchar2(10) not null, 
+    Locationoftest varchar2(10) not null, 
+    Test_Result varchar2(10) not null, 
+    PRIMARY KEY(Test_ID), 
+    FOREIGN KEY(Emp_ID) References Employee,
+    FOREIGN KEY(Scan_ID) References Scanning
+)
+
+create table Symptom ( 
+    SelfReport_ID number not null, 
+    Emp_ID number not null, 
+    SelfReport_Date date not null, 
+    Cold varchar2(5) not null, 
+    Cough varchar2(5) not null, 
+    Fever varchar2(5) not null, 
+    Vomiting varchar2(5) not null, 
+    LossOfTasteOrSmell varchar2(5) not null, 
+    PRIMARY KEY(SelfReport_ID), 
+    FOREIGN KEY(Emp_ID) References Employee 
+)
+
+create table HealthStatus ( 
+    Test_ID number not null, 
+    Emp_ID number not null, 
+    Status_Date date not null, 
+    HealthStatus varchar2(10), 
+    PRIMARY KEY(Test_ID,Emp_ID), 
+    FOREIGN KEY(Emp_ID) References Employee 
+)
+
+create table CaseDetails ( 
+    Test_ID number not null, 
+    Emp_ID number not null, 
+    Symptomatic varchar2(20) not null, 
+    PRIMARY KEY(Test_ID,Emp_ID), 
+    FOREIGN KEY(Emp_ID) References Employee, 
+    FOREIGN KEY(Test_ID) References Covid_Test 
+)

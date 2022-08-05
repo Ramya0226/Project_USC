@@ -1,0 +1,37 @@
+CREATE TABLE Employee (
+Emp_ID  int NOT NULL,
+F_name  varchar(20) NOT NULL,
+L_name  varchar(20) NOT NULL,
+Job_Title   varchar(20) NOT NULL,
+Phone_no    int NOT NULL,
+emil_id varchar(20) NOT NULL,
+Gender  varchar(10) NOT NULL,
+PRIMARY KEY(Emp_ID)
+);
+
+
+
+insert into Employee VALUES (500,'Smith','Wilson', 'Marketing', 5678901234,'kg@sqle.edu','Female');
+insert into Employee VALUES (501,'Smith','Jardine','Executive officer',1234567890,'sj@sqle.edu','Male');
+insert into Employee VALUES (502,'Kivell','Gill','Finance',2345678901,'kg@sqle.edu','Female');
+insert into Employee VALUES (503,'Jardine','Jones','Marketing',3456789012,'jjj@sqle.edu','Male');
+insert into Employee VALUES (504,'Andrews','Gill','Finance',4567890132,'ag@sqle.edu','Male');
+insert into Employee VALUES (505,'Morgan','Jardine', 'CEO', 5678901234,'kg@sqle.edu','Female');
+insert into Employee VALUES (506,'Andrews','Smith', 'IT', 6789012345,'as@sqle.edu','Male');
+insert into Employee VALUES (507,'Kivell','Morgan', 'Sales', 7890123456,'km@sqle.edu','Male');
+insert into Employee VALUES (508,'Gill','Paren', 'Finance', 8901234345,'gp@sqle.edu','Female');
+insert into Employee VALUES (509,'Kivell','Sorvino', 'CA', 9012345678,'ks1@sqle.edu','Female');
+insert into Employee VALUES (510,'Jones','Kivell','Manager',1256789034,'jk@sqle.edu','Male');
+insert into Employee VALUES (511,'Howard','Thompson', 'IT', 5612378904,'ht@sqle.edu','Female');
+insert into Employee VALUES (512,'Sorvino','Gill', 'IT', 5612568924,'sg@sqle.edu','Female');
+insert into Employee VALUES (513,'Adam','Ford', 'Analyst', 7893663456,'af@sqle.edu','Male');
+insert into Employee VALUES (514,'Ford','Miller','Sales',6158715781,'fm@sqle.edu','Male');
+insert into Employee VALUES (515,'Turner','Martin','Manager',9865183781,'tm@sqle.edu','Male');
+insert into Employee VALUES (516,'Scott','James','IT',615338881,'sj1@sqle.edu','Male');
+insert into Employee VALUES (517,'Jaga','Pand','IT',615987881,'jp@sqle.edu','Male');
+insert into Employee VALUES (518,'Mile','Scott','IT',6936780881,'ms1@sqle.edu','Male');
+insert into Employee VALUES (519,'Martin','Allen','IT',615267881,'ma3@sqle.edu','Male');
+insert into Employee VALUES (520,'Blake','King','IT',6123458691,'bk3@sqle.edu','Male');
+insert into Employee VALUES (521,'James','Mark','IT',6115674218,'jm9@sqle.edu','Male');
+insert into Employee VALUES (522,'Marker','Ford','IT',6165782498,'mf5@sqle.edu','Male');
+insert into Employee VALUES (523,'John','Calton','IT',9274571935,'jc4@sqle.edu','Male');

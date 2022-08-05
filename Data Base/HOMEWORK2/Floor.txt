@@ -1,0 +1,55 @@
+insert into Floor values(101,500);
+insert into Floor values(101,501);
+insert into Floor values(101,502);
+insert into Floor values(101,503);
+insert into Floor values(101,504);
+insert into Floor values(101,505);
+insert into Floor values(101,506);
+insert into Floor values(101,507);
+insert into Floor values(101,508);
+insert into Floor values(101,509);
+insert into Floor values(102,510);
+insert into Floor values(102,512);
+insert into Floor values(102,513);
+insert into Floor values(102,514);
+insert into Floor values(102,515);
+insert into Floor values(102,516);
+insert into Floor values(102,517);
+insert into Floor values(102,518);
+insert into Floor values(102,519);
+insert into Floor values(103,520);
+insert into Floor values(103,521);
+insert into Floor values(103,522);
+insert into Floor values(103,523);
+
+R = SymptomTable
+x= Symptom
+y= Emp_ID
+S Emp
+y= Emp_ID
+SELECT * FROM SymptomTable 
+WHERE Symptom not in ( SELECT Symptom FROM (
+(SELECT Symptom , Emp_ID FROM (select Emp_ID from Emp ) as p cross join 
+(select distinct Symptom from SymptomTable) as sp)
+EXCEPT
+(SELECT Symptom , Emp_ID FROM SympotomTable) ) AS r );
+
+SELECT * FROM R 
+WHERE x not in ( SELECT x FROM (
+(SELECT x , y FROM (select y from S ) as p cross join 
+(select distinct x from R) as sp)
+EXCEPT
+(SELECT x , y FROM R) ) AS r );
+
+SELECT * FROM Symptom as s
+WHERE NOT EXISTS (
+(SELECT p.Emp_ID FROM Emp as p )
+EXCEPT
+(SELECT sp.Emp_ID FROM  SymptomTable sp WHERE sp.Symptom = s.Symptom ) );
+
+SELECT * FROM suppliers as s
+WHERE NOT EXISTS (( SELECT p.pid FROM parts as p )
+EXCEPT
+ (SELECT sp.pid FROM supplies sp WHERE sp.sid = s.sid ) );
+
+
